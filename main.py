@@ -31,7 +31,7 @@ for x in range(num_simulations):
     price_series.append(price)
 
     for y in range(num_days):
-        if count == 251:
+        if count == num_days + 1:
             break
         price = price_series[count] * (1 + np.random.normal(0, daily_vol))
         price_series.append(price)
